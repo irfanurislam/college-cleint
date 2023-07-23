@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Southern University of Denmark",
+    "image": "https://i.ibb.co/ZS3W7Q8/p4.jpg",
+    "admissionDates": "August 1 - August 15",
+    "events": "Orientation Day, Alumni Meet",
+    "researchHistory": "Founded in 1905, 1000+ research publications",
+    "sports": "Football, Basketball, Swimming"
+  },
+  {
+    "id": 2,
+    "name": "Titumir College and university",
+    "image": "https://i.ibb.co/RDShgf3/p3.jpg",
+    "admissionDates": "July 20 - August 10",
+    "events": "Freshers' Party, Science Expo",
+    "researchHistory": "Established in 1980, 800+ research publications",
+    "sports": "Cricket, Tennis, Volleyball"
+  },
+  {
+    "id": 3,
+    "name": "Ziangzu University",
+    "image": "https://i.ibb.co/xMgfXfm/p2.jpg",
+    "admissionDates": "June 25 - July 30",
+    "events": "Tech Fest, Cultural Week",
+    "researchHistory": "Since 2005, 1200+ research publications",
+    "sports": "Badminton, Athletics, Chess"
+  }
+]
+
+
+
