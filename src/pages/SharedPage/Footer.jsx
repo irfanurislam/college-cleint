@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaGoogle } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="mt-30 mb-12">
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <footer className="footer p-10 bg-black text-neutral-content">
   <div>
     <span className="footer-title">About Learnportals</span> 
     <a className="link link-hover">About Studyportals
@@ -53,7 +53,7 @@ Bachelorsportal
 
 
 
-      <footer className="footer footer-center p-4 bg-neutral text-neutral-content">
+      <footer className="footer footer-center p-4 bg-black text-neutral-content">
         <div>
           <p>Copyright © 2023 - All right reserved by Learn Portal </p>
         </div>
