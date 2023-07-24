@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { AuthConext } from "../../Providers/AuthProviders";
 
 const Register = () => {
 
-
+const navigate = useNavigate()
   const {newCreateUser,logOut} = useContext(AuthConext)
     const {
         register,
@@ -27,6 +27,7 @@ const Register = () => {
         .then(result =>{
           const logNewUser = result?.user ;
           console.log(logNewUser)
+          navigate('/')
         })
         .catch(error =>{
           console.log(error.message)

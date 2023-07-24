@@ -48,7 +48,7 @@ export const router = createBrowserRouter([
     {
 
         path:'/admissionform/:id',
-        element:<Admission></Admission>,
+        element:<PrivateRoute><Admission></Admission></PrivateRoute>,
         loader:({params}) => fetch(`https://college-server-rouge.vercel.app/college/${params.id}`)
 
     },

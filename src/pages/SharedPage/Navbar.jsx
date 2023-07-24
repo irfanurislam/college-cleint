@@ -25,9 +25,6 @@ const handleLogOut = () =>{
     <>
     <li>  <Link to='/college'>College</Link></li>
     <li> <Link to='/admission'>Admission</Link></li>
-    
-    <li>  <Link to='/signup'>My signup</Link></li>
-    <li>  <Link to='/mycollege'>My Collegue</Link></li>
 
     {
       user ? <>
@@ -60,7 +57,13 @@ const handleLogOut = () =>{
     </ul>
   </div>
   <div className="navbar-end">
-  <button onClick={handleLogOut} className="btn btn-primary">Logout</button>
+ {
+  user? <>
+   <button onClick={handleLogOut} className="btn btn-primary">Logout</button>
+  </>:<>
+  <Link to='/signup'><button className="btn btn-primary">Sign Up</button></Link>
+  </>
+ }
   </div>
 </div>
         </div>

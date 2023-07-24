@@ -1,16 +1,20 @@
 import React, { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthConext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Admission = () => {
 const {user} = useContext(AuthConext)
     const namesall = useLoaderData()
     console.log(namesall)
+
+    const navigate = useNavigate()
     const handleSubmit = (e)=>{
         e.preventDefault()
         console.log("hello")
         const form = e.target;
         const collegeName = form.collegeName.value;
+        const name = form.name.value
         const email = form.email.value;
         const adress = form.adress.value;
         const birth = form.birth.value;
@@ -18,10 +22,31 @@ const {user} = useContext(AuthConext)
         const subject = form.subject.value;
         const image = form.image.value;
 
-        const allValue = {
-            collegeName,email,name,adress,birth,phoneNumber,subject,image
+        const allInfo = {
+            collegeId: namesall._id, collegeName,email,name,adress,birth,phoneNumber,subject,image
         }
-        console.log(allValue)
+        console.log(allInfo)
+
+        fetch("https://college-server-rouge.vercel.app/addmissonform", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(allInfo),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if(data.insertedId){
+              Swal.fire({
+                title: 'Success!',
+                text: 'auth in Added Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+               navigate('/mycollege')
+            }
+          });
     }
   return (
     <div className="my-32">
@@ -39,6 +64,7 @@ const {user} = useContext(AuthConext)
                   type="text"
                   placeholder="college Names"
                   name="collegeName"
+                  required
                   defaultValue={namesall.name}
                   className="input input-bordered"
                 />
@@ -109,7 +135,7 @@ const {user} = useContext(AuthConext)
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">ADDress</span>
+                  <span className="label-text">Address</span>
                 </label>
                 <input
                   type="text"
@@ -128,6 +154,7 @@ const {user} = useContext(AuthConext)
                   placeholder="Image"
                   required
                   name="image"
+                  defaultValue={namesall?.image}
                   className="input input-bordered"
                 />
               </div>
