@@ -1,30 +1,105 @@
 [
   {
-    "id": 1,
+   
     "name": "Southern University of Denmark",
     "image": "https://i.ibb.co/ZS3W7Q8/p4.jpg",
     "admissionDates": "August 1 - August 15",
     "events": "Orientation Day, Alumni Meet",
     "researchHistory": "Founded in 1905, 1000+ research publications",
-    "sports": "Football, Basketball, Swimming"
+    "sports": "Football, Basketball, Swimming",
+    "facilities": [
+      "Extensive Library",
+      "Advanced Research Labs",
+      "Sports Complex",
+      "Student Dorms",
+      "Cafeterias",
+      "Student Center"
+    ]
   },
   {
-    "id": 2,
+    
     "name": "Titumir College and university",
     "image": "https://i.ibb.co/RDShgf3/p3.jpg",
     "admissionDates": "July 20 - August 10",
     "events": "Freshers' Party, Science Expo",
     "researchHistory": "Established in 1980, 800+ research publications",
-    "sports": "Cricket, Tennis, Volleyball"
+    "sports": "Cricket, Tennis, Volleyball",
+    "facilities": [
+      "Well-stocked Library",
+      "Modern Science Labs",
+      "Sports Facilities",
+      "Hostel Accommodation",
+      "Cafeterias",
+      "Student Union"
+    ]
   },
   {
-    "id": 3,
+    
     "name": "Ziangzu University",
     "image": "https://i.ibb.co/xMgfXfm/p2.jpg",
     "admissionDates": "June 25 - July 30",
     "events": "Tech Fest, Cultural Week",
     "researchHistory": "Since 2005, 1200+ research publications",
-    "sports": "Badminton, Athletics, Chess"
+    "sports": "Badminton, Athletics, Chess",
+    "facilities": [
+      "Vast Library",
+      "State-of-the-art Labs",
+      "Sports Arena",
+      "Residential Halls",
+      "Cafeterias",
+      "Student Activity Center"
+    ]
+  },
+  {
+ 
+    "name": "Central College",
+    "image": "https://i.ibb.co/xMgfXfm/p2.jpg",
+    "admissionDates": "October 1 - October 20",
+    "events": "Annual Fest, Career Fair",
+    "researchHistory": "Leading research institution, 2000+ research publications",
+    "sports": "Soccer, Athletics, Table Tennis",
+    "facilities": [
+      "Modern Library",
+      "State-of-the-art Research Labs",
+      "Indoor and Outdoor Sports Facilities",
+      "Student Hostels",
+      "Cafeterias",
+      "Student Services Center"
+    ]
+  },
+  {
+   
+    "name": "Northwest Institute of Science and Technology",
+    "image": "https://i.ibb.co/xMgfXfm/p2.jpg",
+    "admissionDates": "September 15 - October 5",
+    "events": "Science Expo, Cultural Week",
+    "researchHistory": "Pioneering research since 1950, 1500+ research publications",
+    "sports": "Basketball, Volleyball, Swimming",
+    "facilities": [
+      "Comprehensive Library",
+      "Advanced Science Labs",
+      "Olympic-size Swimming Pool",
+      "Student Accommodation",
+      "Cafeterias",
+      "Student Activity Center"
+    ]
+  },
+  {
+    
+    "name": "New University",
+    "image": "https://i.ibb.co/xMgfXfm/p2.jpg",
+    "admissionDates": "September 1 - September 15",
+    "events": "Welcome Party, Annual Conference",
+    "researchHistory": "Newly established, no research publications yet",
+    "sports": "Table Tennis, Golf, Cycling",
+    "facilities": [
+      "Modern Library",
+      "Cutting-edge Research Facilities",
+      "Sports Complex",
+      "Student Housing",
+      "Dining Facilities",
+      "Student Services Center"
+    ]
   }
 ]
 

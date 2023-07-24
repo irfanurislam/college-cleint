@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CollegeCard = ({college}) => {
-    const {id,name,events,admissionDates,researchHistory,image,sports} = college
+    const {_id,name,events,admissionDates,researchHistory,image,sports} = college
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -20,7 +20,7 @@ const CollegeCard = ({college}) => {
           <p> <span className="text-black text-md font-bold">Reasearch: </span> {researchHistory}</p>
        
           <div className="card-actions">
-            <Link to={`/college/${id}`} className="btn btn-primary btn-block">Apply</Link>
+            <Link to={`/college/${_id}`} className="btn btn-primary btn-block">Apply</Link>
           </div>
         </div>
       </div>

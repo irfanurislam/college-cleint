@@ -6,11 +6,11 @@ const CollegesSection = () => {
     const [colleges,setColleges] = useState([])
      
     useEffect(() =>{
-        fetch('colleges.json')
+        fetch('http://localhost:5000/college')
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            setColleges(data)
+            setColleges(data.slice(0,3))
         })
     },[])
 
@@ -18,7 +18,7 @@ const CollegesSection = () => {
         <div className='mt-28'>
             <div className='grid md:grid-cols-3 gap-4'>
                 {
-                    colleges.map(college => <CollegeCard key={college.id} college={college}></CollegeCard>)
+                    colleges.map(college => <CollegeCard key={college._id} college={college}></CollegeCard>)
                 }
             </div>
 
