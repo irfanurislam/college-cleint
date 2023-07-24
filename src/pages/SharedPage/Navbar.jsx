@@ -29,7 +29,7 @@ const handleLogOut = () =>{
     {
       user ? <>
        <li>  <Link to='/mycollege'>My Collegue</Link></li>
-       <li> <Link to='/profile'>{user?.email}</Link></li>
+       <li> <Link to='/myprofile'>{user?.email}</Link></li>
       </>: <>
       <li>  <Link to='/login'>My login</Link></li>
       </>
