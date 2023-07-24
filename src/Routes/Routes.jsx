@@ -12,6 +12,7 @@ import College from "../pages/College/College";
 import MyCollege from "../pages/Mycollege/MyCollege";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
+import AdmissionRoute from "../pages/Admission/AdmissionRoute";
 import Admission from "../pages/Admission/Admission";
 
 
@@ -35,13 +36,20 @@ export const router = createBrowserRouter([
 
         path:'/college/:id',
         element:<SingleCollege />,
-        // loader:({params}) => fetch(`http://localhost:5000/college/${params.id}`)
+        loader:({params}) => fetch(`https://college-server-rouge.vercel.app/college/${params.id}`)
         
     },
     {
 
         path:'/admission',
-        element:<Admission></Admission>
+        element:<AdmissionRoute></AdmissionRoute>
+
+    },
+    {
+
+        path:'/admissionform/:id',
+        element:<Admission></Admission>,
+        loader:({params}) => fetch(`https://college-server-rouge.vercel.app/college/${params.id}`)
 
     },
     {

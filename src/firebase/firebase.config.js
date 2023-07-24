@@ -20,3 +20,7 @@ const firebaseConfig = {
 // i use my dimple project auth
 const app = initializeApp(firebaseConfig);
 export default app
+
+
+
+
