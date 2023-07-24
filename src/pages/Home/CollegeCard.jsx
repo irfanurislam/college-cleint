@@ -5,7 +5,7 @@ const CollegeCard = ({college}) => {
     const {_id,name,events,admissionDates,researchHistory,image,sports} = college
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card min-h-full bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img
             src={image}
