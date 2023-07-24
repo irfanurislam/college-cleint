@@ -9,13 +9,17 @@ import Register from "../pages/SignUp/Register";
 import Login from "../pages/Login/Login";
 import SingleCollege from "../pages/Home/Home/SingleCollege";
 import College from "../pages/College/College";
+import MyCollege from "../pages/Mycollege/MyCollege";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
+import Admission from "../pages/Admission/Admission";
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement: <h2>this is is error</h2>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
 
@@ -33,6 +37,18 @@ export const router = createBrowserRouter([
         element:<SingleCollege />,
         // loader:({params}) => fetch(`http://localhost:5000/college/${params.id}`)
         
+    },
+    {
+
+        path:'/admission',
+        element:<Admission></Admission>
+
+    },
+    {
+
+        path:'/mycollege',
+        element:<PrivateRoute><MyCollege /> </PrivateRoute>
+
     },
     {
 

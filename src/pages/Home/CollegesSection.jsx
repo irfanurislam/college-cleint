@@ -6,7 +6,7 @@ const CollegesSection = () => {
     const [colleges,setColleges] = useState([])
      
     useEffect(() =>{
-        fetch('http://localhost:5000/college')
+        fetch('https://college-server-rouge.vercel.app/college')
         .then(res => res.json())
         .then(data => {
             console.log(data)

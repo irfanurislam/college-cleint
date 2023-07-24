@@ -1,18 +1,41 @@
 import React, { useContext } from 'react';
 import {  Link } from "react-router-dom";
 import { AuthConext } from '../../Providers/AuthProviders';
+import Swal from 'sweetalert2';
 const Navbar = () => {
 const {user,logOut} = useContext(AuthConext)
+
+const handleLogOut = () =>{
+  logOut()
+  .then(result =>{
+    Swal.fire({
+      title: 'Success!',
+      text: 'User Logout successfully',
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
+  })
+  .catch(error =>{
+    console.log(error.message)
+  })
+}
+
+
   const navList =(
     <>
     <li>  <Link to='/college'>College</Link></li>
     <li> <Link to='/admission'>Admission</Link></li>
-    <li>  <Link to='/mycollege'>My Collegue</Link></li>
-    <li>  <Link to='/login'>My login</Link></li>
     
     <li>  <Link to='/signup'>My signup</Link></li>
+    <li>  <Link to='/mycollege'>My Collegue</Link></li>
+
     {
-      user && <li> <Link to='/profile'>{user?.email}</Link></li>
+      user ? <>
+       <li>  <Link to='/mycollege'>My Collegue</Link></li>
+       <li> <Link to='/profile'>{user?.email}</Link></li>
+      </>: <>
+      <li>  <Link to='/login'>My login</Link></li>
+      </>
     }
    
     </>
@@ -29,7 +52,7 @@ const {user,logOut} = useContext(AuthConext)
         {navList}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">LearnPortal</a>
+    <Link to='/' className="btn btn-ghost normal-case text-xl">LearnPortal </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -37,7 +60,7 @@ const {user,logOut} = useContext(AuthConext)
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+  <button onClick={handleLogOut} className="btn btn-primary">Logout</button>
   </div>
 </div>
         </div>
