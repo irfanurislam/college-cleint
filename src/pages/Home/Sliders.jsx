@@ -5,6 +5,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 import { FreeMode, Pagination } from 'swiper/modules';
+import SectionTitle from '../../components/hooks/UseTittle';
 
 const Sliders = () => {
     const imageUrls = [
@@ -17,6 +18,10 @@ const Sliders = () => {
       ];
     return (
         <div className='mt-28'>
+           <SectionTitle
+                subHeading="Graduate Celebrations"
+                heading={'Image Gallery'}
+            ></SectionTitle>
             <div>
             <Swiper
         slidesPerView={3}
