@@ -7,12 +7,12 @@ const Searchbar = ({onSearch}) => {
     onSearch(searchTerm);
   };
     return (
-     <div className=' bg-black py-1'>
+     <div className='py-1'>
            <div className="flex items-center justify-center space-x-4 my-8 ">
       <input
         type="text"
         placeholder="Search for a college name"
-        className="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        className="px-4 py-2 border border-blue-700 rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

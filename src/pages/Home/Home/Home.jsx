@@ -8,7 +8,6 @@ import Review from '../Review';
 const Home = () => {
     return (
         <div>
-           <Searchbar></Searchbar>
            <CollegesSection />
            <Sliders />
             <ResearchPaper />
